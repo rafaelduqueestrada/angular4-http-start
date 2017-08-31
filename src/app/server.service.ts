@@ -15,7 +15,7 @@ export class ServerService {
   }
 
   getServers() {
-    return this.http.get('https://udemy-ng-http-5e39f.firebaseio.com/data').map(
+    return this.http.get('https://udemy-ng-http-5e39f.firebaseio.com/data.json').map(
       (response: Response) => {
         const data = response.json();
         for (const server of data) {
